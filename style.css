@@ -1,0 +1,38 @@
+body {
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+}
+
+#quiz {
+	border: 1px solid black;
+	width: 600px;
+	height: 400px
+}
+
+#quiz>div {
+	overflow-y: scroll;
+	width: calc(100% - 2em);
+	height: calc(100% - 2em);
+	padding: 1em;
+}
+
+#quiz .step {
+	display: none;
+}
+
+#quiz .step:nth-child(1) {
+	display: block;
+}
+
+#quiz .step>h1[data-step]:before {
+	content: "Step " attr(data-step) ": ";
+	font-weight: normal;
+}
+
+#quiz button {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.result, .result_step {
+	display: none;
+}
